@@ -1,0 +1,66 @@
+//////////////////////////////////////////////
+// Module: Header
+//////////////////////////////////////////////
+
+.header
+  &__video
+    background: darken($clr-grn, 15%)
+    position: relative
+    display: block
+    width: 100%
+    height: 280px
+    overflow: hidden
+    z-index: -1
+    &-item
+      display: block
+      position: absolute
+      left: 0
+      top: -170%
+      min-width: 100%
+      min-height: 100%
+
+.banner
+  background: lighten($clr-org, 10%)
+  color: #fff
+  vertical-align: middle
+  &__container
+    +container($container)
+    padding: $blh/4 0
+  &__title
+    color: #fff
+    display: inline-block
+    font-family: #{$font-text}
+    font-size: $fs-base - 2
+    padding: $blh/3 0
+    font-weight: 700
+  &__btn
+    color: #fff
+    display: inline-block
+    float: right
+    padding: $blh/6 $blh
+    text-transform: uppercase
+    font-size: $fs-base - 4
+    font-weight: bold
+    text-align: center
+    margin: 0 0 0 $blh/3
+    +border-radius(3px)
+    +transition(all .3s ease-out)
+    &--login
+      border: solid 1px #fff
+      background: lighten($clr-org, 10%)
+      &:hover,
+      &:focus
+        background: darken($clr-org, 3%)
+        text-decoration: none
+        border-color: lighten($clr-org, 20%)
+    &--signup
+      background: $clr-org
+      border: solid 1px $clr-org
+      &:hover,
+      &:focus
+        background: darken($clr-org, 10%)
+        text-decoration: none
+        border-color: $clr-org
+
+    
+

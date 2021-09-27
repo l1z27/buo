@@ -1,0 +1,56 @@
+//////////////////////////////////////////////
+// Module: Footer
+//////////////////////////////////////////////
+.footer
+  background: darken($clr-blu, 15%)
+  &__container
+    +container($container)
+    padding: $blh*2 0 $blh*2 220px
+    background: url('/assets/img/logo-footer.png') left center/160px no-repeat
+    color: #fff
+  &__disclaimer
+    font-size: $fs-base - 4
+    margin-top: $blh
+  &__nav
+    width: 33%
+    display: inline-block
+    margin: 0
+    padding: 0
+    &-item
+      list-style: none
+      margin: 0
+  &__link
+    color: #fff
+    text-decoration: none
+    +transition(all .3s ease-out)
+    vertical-align: top
+    &:hover,
+    &:focus
+      text-decoration: underline
+  &__btn
+    color: #fff
+    display: inline-block
+    float: right
+    padding: $blh/6 $blh
+    text-transform: uppercase
+    font-size: $fs-base - 4
+    font-weight: bold
+    text-align: center
+    margin: 0 0 0 $blh/3
+    +border-radius(3px)
+    +transition(all .3s ease-out)
+    &--login
+      border: solid 1px #fff
+      background: darken($clr-blu, 15%)
+      &:hover,
+      &:focus
+        background: darken($clr-blu, 10%)
+        text-decoration: none
+    &--signup
+      background: darken($clr-blu, 8%)
+      border: solid 1px darken($clr-blu, 5%)
+      &:hover,
+      &:focus
+        background: darken($clr-blu, 5%)
+        text-decoration: none
+        border-color: darken($clr-blu, 10%)

@@ -1,0 +1,55 @@
+//////////////////////////////////////////////
+// Module: Form
+//////////////////////////////////////////////
+.contactform
+  width: 80%
+  margin: $blh auto
+  display: block
+.form
+  &--hide
+    display: none
+.signupform
+  padding: $blh
+.control
+  margin: $blh/2 0
+  &__label
+    font-size: $fs-base - 3
+    display: block
+    color: $clr-grn
+    margin: 0
+    line-height: normal
+    font-weight: 700
+    text-transform: uppercase
+    padding: 0
+    white-space: nowrap
+  &__input
+    transition: border-color .3s ease-out,background-color .3s ease-out,color .3s ease-out
+    display: block
+    text-align: left
+    width: 100%
+    border: 0
+    border-bottom: 3px solid #ddd
+    background-color: #fff
+    line-height: normal
+    padding: $blh/3 $blh/3.5
+    +border-radius(3px)
+    &--radio
+      transition: border-color .3s ease-out,background-color .3s ease-out,color .3s ease-out
+      display: inline-block
+      background: #fff
+      font-size: $fs-base
+      width: 48%
+      vertical-align: top
+      border: 2px solid #ddd
+      line-height: normal
+      padding: $blh/3 $blh/3.5
+      text-align: center
+      margin: 0
+      font-weight: 400
+      &hide
+        position: absolute
+        left: -99999px
+.active
+  color: #fff
+  background-color: $clr-grn
+  border-color: darken($clr-grn, 10%)

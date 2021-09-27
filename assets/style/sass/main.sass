@@ -1,0 +1,75 @@
+// sass --watch assets/style/sass/main.sass:assets/style/main.css --style compressed
+$clr-grn: #669934
+$clr-org: #ff6501
+$clr-blu: #010066
+
+// Typography
+$fs-base: 15px
+$line-height: 1.6
+$blh: round($fs-base * $line-height)
+
+$font-title: "'Lilita One', cursive"
+$font-text: "'Open Sans', sans-serif"
+$title-trans: "none"
+$title-weight: normal
+$container: 980px
+$clr-title: $clr-blu
+$clr-text: #333
+
+
+
+@import modules/_mixins.sass
+@import modules/_reset.sass
+@import components/_scaffold.sass
+@import components/_grid.sass
+@import components/_btn.sass
+@import components/_form.sass
+@import components/_article.sass
+@import components/_header.sass
+@import components/_nav.sass
+@import components/_footer.sass
+
+.paypal-container
+    width: 300px
+    margin: $blh auto
+
+
+
+.nobug
+    background: lighten($clr-org, 3%)
+    margin: $blh*1.7 0
+    &__container
+        +container(470px)
+        font-family: #{$font-title}
+        text-transform: uppercase
+        color: #fff
+        font-size: $fs-base * 2
+        padding-left: 180px
+    &__img
+        display: block
+        margin: -60px 0 -87px -165px
+        +box-shadow(0 0 5px darken($clr-org, 20%))
+        +border-radius(50%)
+
+.pg-login,
+.pg-404
+    background: $clr-grn
+    .login
+        &__container
+            +container(420px)
+            padding: $blh *5 $blh $blh
+            margin-top: 10%
+            +border-radius(3px)
+            border: solid 2px lighten($clr-org, 15%)
+            background: #fff 
+            position: relative
+            
+            &:before
+                content: ''
+                display: block
+                width: 100%
+                height: 203px
+                position: absolute
+                top: -100px
+                left: 0
+                background: url('/assets/img/logo.png') center center/200px no-repeat
